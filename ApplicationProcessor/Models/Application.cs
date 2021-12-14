@@ -1,26 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-using System;
-using System.Text;
 using ULaw.ApplicationProcessor.Enums;
 
 namespace Ulaw.ApplicationProcessor.Models
 {
     public class Application
     {
-        public Application(DegreeGradeEnum degreeGrade, DegreeSubjectEnum degreeSubject, string faculty, string CourseCode, DateTime Startdate, string Title, string FirstName, string LastName, DateTime DateOfBirth, bool requiresVisa)
+        public Application(DegreeGradeEnum degreeGrade, DegreeSubjectEnum degreeSubject, 
+            string faculty, string courseCode, DateTime startdate, 
+            string title, string firstName, string lastName, DateTime dateOfBirth, bool requiresVisa) //wrapping parameter lists can make viewing on smaller screens easier.
         {
-            this.ApplicationId = new Guid();
-            this.Faculty = faculty;
-            this.CourseCode = CourseCode;
-            this.StartDate = Startdate;
-            this.Title = Title;
-            this.FirstName = FirstName;
-            this.LastName = LastName;
-            this.RequiresVisa = RequiresVisa;
-            this.DateOfBirth = DateOfBirth;
+
+            //Sometimes it's nice to make variable assignment even nicer to read!
+            ApplicationId = new Guid();
+
+            DegreeGrade     = degreeGrade;
+            DegreeSubject   = degreeSubject;
+            
+            Faculty     = faculty;
+            CourseCode  = courseCode;
+            StartDate   = startdate;
+            
+            Title           = title;
+            FirstName       = firstName;
+            LastName        = lastName;
+            DateOfBirth     = dateOfBirth;
+            RequiresVisa    = RequiresVisa;
         }
 
         public Guid ApplicationId { get; private set; }
