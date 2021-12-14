@@ -2,12 +2,10 @@
 using Ulaw.ApplicationProcessor.Models;
 using ULaw.ApplicationProcessor.Enums;
 
-
 namespace ULaw.ApplicationProcessor
 {
     public static class ApplicationHelper
     {
-
         public static string Process(Application app)
         {
             var result = new StringBuilder();

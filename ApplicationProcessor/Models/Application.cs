@@ -27,17 +27,23 @@ namespace Ulaw.ApplicationProcessor.Models
             RequiresVisa    = RequiresVisa;
         }
 
+        //Please note that the parameter list order matches the parameter assignment order matches the Property assignment order.
+        //This makes it slightly easier to locate errant variables.  Even more important on monster models with hundreds of lines.
+        //Note that the spacing helps the eye to locate information quicker than just having them in a big block of text.
+
         public Guid ApplicationId { get; private set; }
+
+        public DegreeGradeEnum DegreeGrade { get; set; }
+        public DegreeSubjectEnum DegreeSubject { get; set; }
+        
         public string Faculty { get; private set; }
         public string CourseCode { get; private set; }
         public DateTime StartDate { get; private set; }
+        
         public string Title { get; private set; }
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
         public DateTime DateOfBirth { get; private set; }
         public bool RequiresVisa { get; private set; }
-
-        public DegreeGradeEnum DegreeGrade { get; set; }
-        public DegreeSubjectEnum DegreeSubject { get; set; }
     }
 }
